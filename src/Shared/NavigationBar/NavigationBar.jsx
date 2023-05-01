@@ -18,7 +18,7 @@ const NavigationBar = () => {
 
                 <div className='md:flex hidden'>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/'>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/foods'>Food</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/about'> About</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
                     {/* <NavLink className={({ isActive }) => isActive ? 'text-white' : 'default'} to='/register'>Register</NavLink> */}
