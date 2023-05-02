@@ -7,6 +7,8 @@ import Blog from "../Pages/Blog";
 import Help from "../Pages/Help";
 import Home from "../Pages/Home/Home";
 import Recipes from "../Pages/Recipes/Recipes";
+import Login from "../Shared/LoginAndRegister/Login";
+import Register from "../Shared/LoginAndRegister/Register";
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,15 @@ const router = createBrowserRouter([
                     element: <Recipes></Recipes>,
                     loader: ({params})=>fetch(`http://localhost:5000/recipes/${params.id}`)
 
+
+                },
+                {
+                    path: '/login',
+                    element:<Login></Login>
+                },
+                {
+                    path: '/register',
+                    element: <Register></Register>
 
                 },
                 {

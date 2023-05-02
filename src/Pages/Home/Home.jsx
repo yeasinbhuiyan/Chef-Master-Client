@@ -16,6 +16,8 @@ const Home = () => {
     }, [])
     return (
         <div>
+
+            {/* banner section  */}
             <div className='banner-container'>
                 <div className='p-16 text-center'>
                     <h1 className='my-5 text-7xl font-semibold text-gray-200'>Welcome To   <br />Our Bangladeshi
@@ -26,6 +28,11 @@ const Home = () => {
 
             </div>
 
+
+
+
+
+            {/* all chef container */}
 
             <div className='text-center mt-28'>
                 <h3 className='my-5 text-4xl font-semibold text-gray-600'>Our All Chefs</h3>
@@ -41,11 +48,14 @@ const Home = () => {
 
 
 
-            <div className='text-center mt-10'>
+            {/* Frequently asked question container */}
+
+            <div className='text-center mt-28'>
                 <h1 className='text-4xl font-semibold text-gray-600'>Frequently Asked Question?</h1>
+                <p className='font-semibold text-sm mt-3'>You may find here some frequently asked questions that may help you a lot and we have answered the questions below.</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 p-10 mx-auto'>
-                <div className='mt-10'>
+                <div className='mt-5'>
                     <AsekedQuestion></AsekedQuestion>
                 </div>
 
@@ -61,24 +71,21 @@ const Home = () => {
 
 
 
+
             {/* slider container */}
 
-
-
-
-            <div className='text-center mt-10 mb-5'>
+            <div className='text-center mt-28 mb-5'>
                 <h1 className='text-4xl font-semibold text-gray-900'>Our Help</h1>
-                <p className='font-semibold my-4'>A recipe website can help us with a variety of things related to cooking and meal preparation.</p>
+                <p className='font-semibold text-sm my-4'>A recipe website can help us with a variety of things related to cooking and meal preparation.</p>
             </div>
-            <div className='grid grid-cols-2'>
-
-                <div className=''>
+            <div className='grid grid-cols-1 md:grid-cols-2 mt-10'>
+                <div className='mx-auto'>
                     <Slider></Slider>
                 </div>
 
-                <div>
+                <div className='mx-auto px-5'>
 
-                    <div className='mt-5'>
+                    <div>
                         <h1 className='font-semibold'>Recipe ideas</h1>
                         <p className='text-sm text-gray-700'> If you are looking for inspiration for what to cook for dinner, a recipe website can be a great resource for finding new and interesting recipe ideas. You can search for recipes based on specific ingredients, dietary restrictions, or cuisine types.</p>
                     </div>
@@ -86,14 +93,23 @@ const Home = () => {
                     <div className='mt-5'>
 
                         <h1 className='font-semibold'>Cooking tips</h1>
-                        <p> A recipe website can also provide helpful cooking tips and techniques to help you improve your culinary skills. For example, you might find tips on how to properly roast a chicken or how to make the perfect homemade pasta.</p>
+                        <p className='text-sm text-gray-700'> A recipe website can also provide helpful cooking tips and techniques to help you improve your culinary skills. For example, you might find tips on how to properly roast a chicken or how to make the perfect homemade pasta.</p>
                     </div>
 
                     <div className='mt-5'>
 
                         <h1 className='font-semibold'>Nutritional information</h1>
-                        <p> Many recipe websites provide detailed nutritional information for each recipe, which can be helpful for people who are trying to eat a balanced and healthy diet.</p>
+                        <p className='text-sm text-gray-700'>Many recipe websites provide detailed nutritional information for each recipe, which can be helpful for people who are trying to eat a balanced and healthy diet.</p>
                     </div>
+
+                    <div className='mt-5'>
+
+                        <h1 className='font-semibold'>User reviews</h1>
+                        <p className='text-sm text-gray-700'>Most recipe websites allow users to leave reviews and ratings for each recipe. This can be helpful in determining whether a recipe is worth trying or not.</p>
+                    </div>
+
+
+
                 </div>
 
 
@@ -103,17 +119,6 @@ const Home = () => {
 
 
 
-            {/* help email  */}
-            {/* <div className='w-96 mx-auto'>
-                    <div className='p-10 bg-gray-300 mx-auto'>
-                        <h1 className='text-center font-semibold text-sm'>Lets Question in Mind ? Let Us Help You</h1>
-
-                        <div className='flex items-center mt-5 ms-5'>
-                            <input className='rounded px-2' type="email" placeholder='Email' name="email" id="" />
-                            <button className='ms-1 btn btn-xs'>Email</button>
-                        </div>
-                    </div>
-                </div>  */}
 
 
         </div>

@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './NavigationBar.css'
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const NavigationBar = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const user = null
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const logout = () => {
+        logOut()
+    }
+
     return (
         <div className=''>
-            <div className='navbar bg-gradient-to-r from-gray-500  to-gray-200 flex justify-between items-center'>
+            <div className='navbar bg-gradient-to-r from-gray-500  to-gray-200 flex  items-center'>
 
                 <div>
                     {!isOpen &&
@@ -16,21 +24,37 @@ const NavigationBar = () => {
                     }
                 </div>
 
-                <div className='md:flex hidden'>
+
+
+                <div className='md:flex hidden mx-auto'>
+
+
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/'>Home</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/about'> About</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
-                    {/* <NavLink className={({ isActive }) => isActive ? 'text-white' : 'default'} to='/register'>Register</NavLink> */}
-                    <div>
-                        {user ? <><small className='navbar-link font-semibold'> {user.displayName}</small> <button onClick={Logout} className='btn btn-xs'>Logout </button></> :
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/login'>Login</NavLink>}
-                    </div>
+                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
+
+
+
                 </div>
+
+
+                <div className='md:flex hidden items-center'>
+                    {user ? <> <img className='rounded-full me-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'} title={user?.displayName} alt="" /> <button onClick={logout} className='btn btn-xs'>Logout </button></> :
+                        <button className='btn btn-xs'><Link to='/login'>Login</Link></button>}
+                </div>
+
+
+
+
+
+
+
                 <div className='md:hidden'>
 
-                    <button onClick={() => setIsOpen(!isOpen)} className='btn border-yellow-500 bg-gradient-to-r from-pink-500 to-yellow-400'> </button>
-                    {/* <FaBars></FaBars> */}
+                    <button onClick={() => setIsOpen(!isOpen)} className='btn border-gray-400 bg-gradient-to-r from-gray-600 to-gray-700'> <FaBars></FaBars></button>
+                   
 
                 </div>
                 {
@@ -40,13 +64,13 @@ const NavigationBar = () => {
 
 
                         <div className='absolute top-0 left-0'>
-                            <button onClick={() => setIsOpen(!isOpen)} className='p-3'>  </button>
-                            {/* <FaTimes></FaTimes> */}
+                            <button onClick={() => setIsOpen(!isOpen)} className='p-3'>  <FaTimes></FaTimes> </button>
+                           
 
                         </div>
 
-                        <div className='mb-5  p-6'>
-                            {user ? <><span className='navbar-link font-semibold' > {user.displayName}</span> <button onClick={Logout} className='btn btn-xs'>Logout </button></> :
+                        <div className='mb-5 p-6'>
+                            {user ? <><span className='navbar-link font-semibold' > {user.displayName}</span> <button onClick={logout} className='btn btn-xs'>Logout </button></> :
                                 <li className='my-2 list-none text-xl font-semibold'><NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/login'>Login</NavLink></li>}
                         </div>
                         <li className='my-2 list-none text-xl font-semibold'>
@@ -54,16 +78,19 @@ const NavigationBar = () => {
                         </li>
 
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/foods'>Food</NavLink></li>
+                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/Blog'>Blog</NavLink></li>
                         <li className='my-2 list-none text-xl font-semibold'>
                             <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/about'> About</NavLink>
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                        <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+
+                        </li>
+                        <li className='my-2 list-none text-xl font-semibold'>
+                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
 
                         </li>
 
-                        <li className='my-2 list-none text-xl font-semibold'> <NavLink className={({ isActive }) => isActive ? 'text-white' : 'default'} to='/login'>Login</NavLink></li>
 
                     </div>
                 }
