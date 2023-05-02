@@ -9,6 +9,7 @@ import Home from "../Pages/Home/Home";
 import Recipes from "../Pages/Recipes/Recipes";
 import Login from "../Shared/LoginAndRegister/Login";
 import Register from "../Shared/LoginAndRegister/Register";
+import About from "../Pages/About/About";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
                 {
                     path: '/help',
                     element: <Help></Help>
+                },
+                {
+                    path : '/about',
+                    element: <About></About>
+                },
+                {
+                    path : '/contact',
+                    element: <h1>this is contact</h1>
                 }
             ]
     }

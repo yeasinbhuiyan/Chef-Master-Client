@@ -3,7 +3,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const AllChef = ({ chefDetails }) => {
-    console.log(chefDetails)
+
     const { id, name, image, recipes, experience, likes,bio,recipe_number } = chefDetails
     const [readMore,setreadMore] = useState(false)
     return (
