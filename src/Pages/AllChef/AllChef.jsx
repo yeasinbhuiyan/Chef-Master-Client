@@ -9,7 +9,7 @@ const AllChef = ({ chefDetails }) => {
     return (
         <div className='mx-auto'>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-full bg-base-100 shadow-xl">
                 <figure><img className='w-full h-64' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-semibold">{name}</h2>

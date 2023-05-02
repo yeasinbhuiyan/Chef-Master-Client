@@ -5,20 +5,20 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 
-console.log(import.meta.env.VITE_apiKey)
-console.log(import.meta.env.VITE_authDomain)
-console.log(import.meta.env.VITE_projectId)
-console.log(import.meta.env.VITE_storageBucket)
-console.log(import.meta.env.VITE_messagingSenderId)
-console.log(import.meta.env.VITE_appId)
+// console.log(import.meta.env.VITE_apiKey)
+// console.log(import.meta.env.VITE_authDomain)
+// console.log(import.meta.env.VITE_projectId)
+// console.log(import.meta.env.VITE_storageBucket)
+// console.log(import.meta.env.VITE_messagingSenderId)
+// console.log(import.meta.env.VITE_appId)
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAjgZ1-_Q5P-niG005Hr2Q3Ag_08ZM0qE4",
-  authDomain: "chef-master-b155b.firebaseapp.com",
-  projectId: "chef-master-b155b",
-  storageBucket: "chef-master-b155b.appspot.com",
-  messagingSenderId: "632390302724",
-  appId: "1:632390302724:web:9a28c4860800e569024951"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

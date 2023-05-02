@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
+
+
 
 
     const { createAccount, userName } = useContext(AuthContext)
@@ -21,9 +23,14 @@ const Register = () => {
     const [passwordError, setPasswordError] = useState('')
     const [emailError, setEmailError] = useState('')
 
+
+    const navigate = useNavigate()
+    const location= useLocation()
+
+
     const handleRegister = (event) => {
 
-
+          
 
         event.preventDefault()
         const eventTarget = event.target
@@ -31,6 +38,10 @@ const Register = () => {
         // const password = eventTarget.password.value
         // const name = eventTarget.name.value
         // const img = eventTarget.photo.value
+
+        console.log(location)
+
+        const from = location.state?.from?.pathname || '/'
 
         if (password.length < 6) {
             setError('At least give me 6 characters')
@@ -43,6 +54,7 @@ const Register = () => {
                 const newAccount = result.user
                 userName(name, img)
                 eventTarget.reset()
+                navigate(from)
                 console.log(newAccount)
             })
             .catch((error) => {
@@ -120,7 +132,7 @@ const Register = () => {
         <form onSubmit={handleRegister} className="hero min-h-screen -z-0 bg-base-200">
             <div className="flex-col p-10">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold">Please Register</h1>
+                    <h1 className="text-4xl font-bold">Please Register</h1>
                 </div>
 
                 <div className="flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-5">

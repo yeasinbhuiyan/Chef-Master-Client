@@ -1,13 +1,14 @@
 /* eslint-disable no-constant-condition */
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const { loginAccount } = useContext(AuthContext)
 
-
+   const navigate = useNavigate()
+   const location = useLocation()
     const [error, setError] = useState('')
     const handleLogIn = (event) => {
         event.preventDefault()
@@ -16,6 +17,9 @@ const Login = () => {
         const eventTarget = event.target
         const email = eventTarget.email.value
         const password = eventTarget.password.value
+
+
+        const from = location.state?.from.pathname || '/'
 
         if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
             return setError('Please Give Us Your Valid Email')
@@ -32,6 +36,7 @@ const Login = () => {
                 const logged = result.user
                 eventTarget.reset()
                 console.log(logged)
+                navigate(from)
             })
 
             .catch((error) => {
@@ -60,7 +65,7 @@ const Login = () => {
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Please Login</h1>
                 </div>
-                <div className="flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-5">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -87,7 +92,7 @@ const Login = () => {
                         </div>
 
 
-                        <p><small>Dont you have Account? <Link className='font-semibold' to='/register'>Register</Link></small></p>
+                        <p><small>Dont you have Account? <Link state={location.state} className='font-semibold' to='/register'>Register</Link></small></p>
                         {/* state={location.state} */}
 
 
