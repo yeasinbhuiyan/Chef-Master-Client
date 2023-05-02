@@ -7,7 +7,7 @@ const NavigationBar = () => {
     const user = null
     return (
         <div className=''>
-            <div className='navbar bg-gradient-to-r from-yellow-400  to-pink-400 flex justify-between items-center'>
+            <div className='navbar bg-gradient-to-r from-gray-500  to-gray-200 flex justify-between items-center'>
 
                 <div>
                     {!isOpen &&

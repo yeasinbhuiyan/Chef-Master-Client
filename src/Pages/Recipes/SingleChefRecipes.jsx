@@ -1,22 +1,48 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Rating } from '@smastrom/react-rating'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const SingleChefRecipes = ({ allRecies }) => {
-    const { recipe_name, recipe_id, chef_id, image, ingredients } = allRecies
+    const { recipe_name, recipe_id, chef_id, image, ingredients, details,rating } = allRecies
+
+    const [readMore, setreadMore] = useState(false)
+
+    const [favourite,setFavourite] = useState(false)
 
 
+    const handleFavourite=()=>{
+                toast('successfully added your favourite food')
+                setFavourite(true)
+    }
 
-    
 
     return (
         <div className='my-10'>
             <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img className='w-96 h-60' src={image} alt="Movie" /></figure>
+                <figure><img className='w-96 h-64' src={image} alt="Movie" /></figure>
+
+
                 <div className="card-body">
                     <h2 className="card-title">{recipe_name}</h2>
-                  
-                    <p>{recipe_id}</p>
+                    <p className='text-sm font-semibold'><span className='font-bold me-2'>Ingredients:</span> {ingredients}</p>
+
+                    <div className='read-more'>
+                        {
+                            !readMore ? <p className='text-sm font-medium w-80'><span className='font-bold me-2'>Cooking:</span>{details.slice(0, 70)}<span onClick={() => setreadMore(!readMore)} className='text-gray-600 font-bold cursor-pointer'>...read more</span></p> :
+                                <p className='text-sm font-medium'><span className='font-bold me-2'>Cooking:</span>{details}<span onClick={() => setreadMore(!readMore)} className='text-gray-600 font-bold cursor-pointer'>...read less</span></p>
+
+
+                        }
+                    </div>
+                    <p className='flex items-center'><Rating
+                        style={{ maxWidth: 100 }}
+                        value={rating}
+                        readOnly
+                    /> <span className='font-semibold'>{rating}</span></p>
+
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Watch</button>
+                        <button disabled={favourite} onClick={handleFavourite} className="btn btn-dark">Favourite</button>
                     </div>
                 </div>
             </div>
