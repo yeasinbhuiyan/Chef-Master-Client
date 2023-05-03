@@ -57,7 +57,7 @@ const NavigationBar = () => {
                 {
                     isOpen &&
 
-                    <div className='md:hidden flex flex-col left-0 p-10 top-0 absolute   bg-opacity-70 bg-gradient-to-r from-gray-500 to-gray-200'>
+                    <div className='md:hidden dura flex flex-col left-0 p-10 top-0 absolute   bg-opacity-70 bg-gradient-to-r from-gray-500 to-gray-200'>
 
 
                         <div className='absolute top-0 left-0'>

@@ -24,7 +24,7 @@ const Recipes = () => {
     }, [])
     return (
         <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 m-10 mx-auto'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 m-10 mx-auto'>
 
 
                 <div className='mx-auto p-5 md:p-0'>
@@ -32,7 +32,7 @@ const Recipes = () => {
 
                 </div>
 
-                <div className='mx-auto p-5 md:p-0'>
+                <div className='mx-auto p-5 md:p-10 lg:p-0'>
 
                     <h1 className='text-5xl font-semibold'>{chef.name}</h1>
 

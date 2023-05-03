@@ -7,3 +7,20 @@
 .navbar a{
     margin-right: 25px;
 }
+
+.dura{
+   
+        opacity: 0;
+        animation: fade-in 400ms ease-in-out forwards;
+      
+      
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

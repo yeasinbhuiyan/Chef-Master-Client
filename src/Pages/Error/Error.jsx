@@ -1,5 +1,5 @@
 import React from 'react';
-import errorBanner from '/public/5206817.jpg'
+import errorBanner from '/5206817.jpg'
 import { Link } from 'react-router-dom';
 
 const Error = () => {
