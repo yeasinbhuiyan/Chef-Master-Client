@@ -9,22 +9,22 @@ const auth = getAuth(app)
 
 
 const AuthProvider = ({ children }) => {
-    const [user,setUser] = useState(null)
-    const [loading,setLoading] = useState(true)
+    const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
 
 
-        const google =(googelProvider)=>{
+    const google = (googelProvider) => {
+        setLoading(true)
+        return signInWithPopup(auth, googelProvider)
 
-          return  signInWithPopup(auth,googelProvider)
-        
-        }
+    }
 
-        const github =(githubProvider)=>{
+    const github = (githubProvider) => {
+        setLoading(true)
+        return signInWithPopup(auth, githubProvider)
 
-          return  signInWithPopup(auth,githubProvider)
-        
-        }
+    }
 
 
     const createAccount = (email, password) => {
@@ -39,7 +39,8 @@ const AuthProvider = ({ children }) => {
     }
 
     const logOut = () => {
-        signOut(auth)
+        setLoading(true)
+        return signOut(auth)
     }
 
     useEffect(() => {
@@ -53,14 +54,14 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    const userName = (name,img) => {
+    const userName = (name, img) => {
 
-        return  updateProfile(auth.currentUser, {
-                displayName: name, photoURL: img
-            })
-            .then(() => setUser((user)=>({...user,displayName: name, photoURL: img})))
-            .catch((error) => {console.log(error)});
-        }
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: img
+        })
+            .then(() => setUser((user) => ({ ...user, displayName: name, photoURL: img })))
+            .catch((error) => { console.log(error) });
+    }
 
 
 

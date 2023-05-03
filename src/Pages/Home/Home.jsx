@@ -5,8 +5,14 @@ import Slider from '../../Shared/Carusel/Slider';
 import AsekedQuestion from '../../Shared/AsekQuestion/AsekedQuestion';
 import Lottie from "lottie-react";
 import animationlottie2 from '../../assets/45729-chef-animation.json'
+import { useNavigation } from 'react-router-dom';
+import LoadingSpinner from '../../Shared/LoadingSpinner';
 
 const Home = () => {
+
+    const navigation = useNavigation()
+    console.log(navigation)
+
     const [allChef, setAllchef] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/chefDetails')
@@ -14,15 +20,26 @@ const Home = () => {
             .then(data => setAllchef(data))
 
     }, [])
+
+
+    if (navigation.state === 'loading') {
+        return (<LoadingSpinner></LoadingSpinner>)
+
+    }
+    
+
+
+
     return (
         <div>
 
             {/* banner section  */}
             <div className='banner-container'>
-                <div className='md:p-16 p-9 text-center'>
+                <div className='md:p-16 p-6 text-center'>
                     <h1 className='md:my-5 text-4xl md:text-7xl font-semibold text-gray-200'>Welcome To   <br />Our Bangladeshi
                         <br />
                         Shape Recipes</h1>
+                       
                     <p className='mt-5 text-gray-400 font-medium'> where you will find a collection of delicious and unique recipes created by a seasoned chef with a passion for good food. From comforting classics to innovative dishes, our recipes are designed to tantalize your taste buds and inspire your culinary creativity. Each recipe comes with detailed instructions and helpful tips to ensure success in the kitchen. Whether you are a novice cook or a seasoned pro, our recipes are approachable, easy to follow, and always packed with flavor. So, grab your apron and get ready to explore the world of culinary delights with us!</p>
                 </div>
 
@@ -39,6 +56,7 @@ const Home = () => {
             <section>
                 <div className='text-center mt-28'>
                     <h3 className='my-5 text-4xl font-semibold text-gray-600'>Our All Chefs</h3>
+                <hr className='w-16 border-solid border-y mx-auto text-bold  text-cyan-900 mt-3'/>
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10 p-7 md:p-10 mx-auto'>
@@ -86,7 +104,7 @@ const Home = () => {
                     <h1 className='text-4xl font-semibold text-gray-900'>Our Help</h1>
                     <p className='font-semibold text-sm my-4'>A recipe website can help us with a variety of things related to cooking and meal preparation.</p>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 mt-10'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 mt-10 mb-14'>
                     <div className='mx-auto'>
                         <Slider></Slider>
                     </div>
