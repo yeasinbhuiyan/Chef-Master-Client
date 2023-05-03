@@ -27,11 +27,12 @@ const Recipes = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 m-10 mx-auto'>
 
 
-                <div className='mx-auto'>
+                <div className='mx-auto p-5 md:p-0'>
                     <img className='w-96 h-full rounded' src={chef.image} alt="" />
 
                 </div>
-                <div className='mx-auto'>
+
+                <div className='mx-auto p-5 md:p-0'>
 
                     <h1 className='text-5xl font-semibold'>{chef.name}</h1>
 

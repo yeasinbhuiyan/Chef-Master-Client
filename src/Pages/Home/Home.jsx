@@ -104,7 +104,7 @@ const Home = () => {
                     <h1 className='text-4xl font-semibold text-gray-900'>Our Help</h1>
                     <p className='font-semibold text-sm my-4'>A recipe website can help us with a variety of things related to cooking and meal preparation.</p>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 mt-10 mb-14'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 mt-10 mb-28'>
                     <div className='mx-auto'>
                         <Slider></Slider>
                     </div>

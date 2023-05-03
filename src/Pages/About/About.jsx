@@ -30,8 +30,8 @@ const About = () => {
                     <div className='grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2 p-6 md:p-16 mb-8'>
                         <div className='space-y-8'>
                             <div>
-                                <p className='mb-4 text-xl font-medium'>
-                                    Taste of Home: Delicious Recipes from a Professional Chef
+                                <p className='mb-4 text-xl font-semibold'>
+                                    Taste of Home - Delicious Recipes from a Professional Chef
                                 </p>
                                 <p className='text-gray-700'>
                                     This website could showcase a chefs favorite recipes, including appetizers, 
