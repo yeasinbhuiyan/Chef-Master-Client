@@ -26,11 +26,11 @@ const NavigationBar = () => {
                 <div className='md:flex hidden mx-auto'>
 
 
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/'>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/about'> About</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
 
 
 
@@ -68,25 +68,25 @@ const NavigationBar = () => {
 
 
                         <div className='flex items-center mb-2 p-3'>
-                            {user ? <> <img  className='rounded-full me-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'} title={user?.displayName} alt="" /> <button onClick={logout} className='bg-gray-600  btn-dark px-3 py-1 text-white rounded'>Logout </button></> :
+                            {user ? <> <img  title={user.displayName} className='rounded-full me-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'}  alt="" /> <button onClick={logout} className='bg-gray-600  btn-dark px-3 py-1 text-white rounded'>Logout </button></> :
                                <button className='bg-gray-600 text-center btn-dark px-3 py-1 text-white rounded'><Link to='/login'>Login</Link></button>}
                         </div>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/'>Home</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
                         </li>
 
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/Blog'>Blog</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/about'> About</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
 
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'navbar-link' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
 
                         </li>
 

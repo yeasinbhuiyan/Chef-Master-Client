@@ -2,14 +2,27 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaBeer, FaGithub, FaGoogle } from 'react-icons/fa';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const { loginAccount } = useContext(AuthContext)
+    const { loginAccount, google, github } = useContext(AuthContext)
 
-   const navigate = useNavigate()
-   const location = useLocation()
+
+    const googelProvider = new GoogleAuthProvider
+    const githubProvider = new GithubAuthProvider
+
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from.pathname || '/'
+
+
     const [error, setError] = useState('')
+
+
+
     const handleLogIn = (event) => {
         event.preventDefault()
 
@@ -19,7 +32,6 @@ const Login = () => {
         const password = eventTarget.password.value
 
 
-        const from = location.state?.from.pathname || '/'
 
         if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
             return setError('Please Give Us Your Valid Email')
@@ -51,6 +63,41 @@ const Login = () => {
 
 
     }
+
+
+
+
+    const handleGoogleLogin = () => {
+        google(googelProvider)
+            .then(result => {
+                const logged = result.user
+                console.log(logged)
+                navigate(from)
+
+            })
+            .catch((error) => {
+                setError(error.message)
+                console.log(error.message)
+            })
+    }
+
+
+
+    const handleGithubLogin = () => {
+        github(githubProvider)
+            .then(result => {
+                const logged = result.user
+                console.log(logged)
+                navigate(from)
+            })
+            .catch((error) => {
+                setError(error.message)
+                console.log(error.message)
+            })
+    }
+
+
+
 
 
     // const handleEmail=()=>{
@@ -92,12 +139,28 @@ const Login = () => {
                         </div>
 
 
+                        <p className='text-center text-sm font-semibold'>Or Login With</p>
+
+
+
+                        <div className='flex mb-3 gap-4'>
+                            <div>
+                                <button onClick={handleGoogleLogin} className="btn btn-outline btn-success"> <FaGoogle className='text-green-700'></FaGoogle> <small>Login With Google</small></button>
+                            </div>
+                            <div>
+                                <button onClick={handleGithubLogin} className="btn btn-outline"><FaGithub></FaGithub> <small>Login With Github</small></button>
+                            </div>
+                        </div>
+
+
+
+
                         <p><small>Dont you have Account? <Link state={location.state} className='font-semibold' to='/register'>Register</Link></small></p>
                         {/* state={location.state} */}
 
 
 
-                      
+
 
                         <div>
                             <p className='font-semibold text-red-500'><small>{error}</small></p>

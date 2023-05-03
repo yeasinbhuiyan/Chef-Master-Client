@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import SingleChefRecipes from './SingleChefRecipes';
 import { FaThumbsUp } from 'react-icons/fa';
 
 const Recipes = () => {
+    const navigate = useNavigate()
     const recipes = useLoaderData()
 
     const { id } = useParams()
     const [chef, setChef] = useState({})
+
 
     useEffect(() => {
 
         fetch(`http://localhost:5000/chefDetails/${id}`)
             .then(res => res.json())
             .then(data => setChef(data))
+            .catch((error)=>{
+                navigate('/error')
+            })
+
+            
     }, [])
     return (
         <div>

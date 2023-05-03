@@ -1,12 +1,32 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../../firebase.config';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+// import { Result } from 'postcss';
 
 export const AuthContext = createContext(null)
 const auth = getAuth(app)
+
+
+
 const AuthProvider = ({ children }) => {
     const [user,setUser] = useState(null)
     const [loading,setLoading] = useState(true)
+
+
+
+        const google =(googelProvider)=>{
+
+          return  signInWithPopup(auth,googelProvider)
+        
+        }
+
+        const github =(githubProvider)=>{
+
+          return  signInWithPopup(auth,githubProvider)
+        
+        }
+
+
     const createAccount = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -50,7 +70,9 @@ const AuthProvider = ({ children }) => {
         createAccount,
         logOut,
         userName,
-        loading
+        loading,
+        google,
+        github
 
 
     }
