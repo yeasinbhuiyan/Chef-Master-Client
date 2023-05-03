@@ -2,19 +2,25 @@ import React from 'react';
 import { FaDownload } from 'react-icons/fa';
 import Pdf from "react-to-pdf";
 
-const ref = React.createRef();
 
 const Blog = () => {
-    console.log('this is blog')
+    const ref = React.createRef();
+    const options = {
+        orientation: 'portrait ',
+        unit: 'in',
+        format: [9, 16]
+    };
+
+    
     return (
         <div>
-          
 
-          <div className='text-center mt-5'>
-          <Pdf  targetRef={ref}  filename="code-example.pdf">
-                {({ toPdf }) => <button className='btn btn-dark' onClick={toPdf} >Download Pdf <FaDownload className='ms-2'></FaDownload></button>}
-            </Pdf>
-          </div>
+
+            <div className='text-center mt-5'>
+                <Pdf targetRef={ref} option={options} filename="code-example.pdf" x={0.5} y={0.8} scale={0.6}>
+                    {({ toPdf }) => <button className='btn btn-dark' onClick={toPdf} >Download Pdf <FaDownload className='ms-2'></FaDownload></button>}
+                </Pdf>
+            </div>
 
 
 

@@ -7,7 +7,8 @@ import Lottie from "lottie-react";
 import animationlottie2 from '../../assets/45729-chef-animation.json'
 import { Link, useNavigation } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import {  FaArrowRight } from 'react-icons/fa';
+import FeedBack from '../../Shared/FeedBack/FeedBack';
 
 const Home = () => {
 
@@ -149,6 +150,11 @@ const Home = () => {
 
 
             </section>
+
+
+<FeedBack></FeedBack>
+
+           
 
 
 
