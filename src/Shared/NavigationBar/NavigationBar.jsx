@@ -30,7 +30,7 @@ const NavigationBar = () => {
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
+                    {/* <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink> */}
 
 
 
@@ -85,10 +85,10 @@ const NavigationBar = () => {
                             <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
 
                         </li>
-                        <li className='my-2 list-none text-xl font-semibold'>
+                        {/* <li className='my-2 list-none text-xl font-semibold'>
                             <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
 
-                        </li>
+                        </li> */}
 
 
                     </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const Help = () => {
     return (
         <div>
-            <div className='max-w-screen-xl sm:mx-auto'>
+            <div data-aos="fade-up"  className='max-w-screen-xl sm:mx-auto'>
                 <div className='grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2 p-6 md:p-16 mb-8'>
                     <div className='space-y-8'>
                         <div>

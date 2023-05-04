@@ -33,7 +33,7 @@ const FeedbackForm = () => {
 
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 mb-10">
+            <div data-aos="fade-up"  className="grid grid-cols-1 md:grid-cols-2 mb-10">
 
 
                 <div className="card mt-20 w-80 mx-auto">

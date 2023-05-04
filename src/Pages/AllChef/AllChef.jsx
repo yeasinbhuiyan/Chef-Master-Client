@@ -9,7 +9,7 @@ const AllChef = ({ chefDetails }) => {
     const { id, name, image, recipes, experience, likes,bio,recipe_number } = chefDetails
     const [readMore,setreadMore] = useState(false)
     return (
-        <div className='mx-auto'>
+        <div data-aos="fade-up"  className='mx-auto'>
 
             <div className="card w-full bg-base-100 shadow-xl">
                 <figure><LazyLoadImage className='w-full h-64' src={image} alt="Shoes" /></figure>

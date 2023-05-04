@@ -37,7 +37,7 @@ const Home = () => {
 
             {/* banner section  */}
             <div className='banner-container'>
-                <div className='md:p-16 p-6 text-center'>
+                <div data-aos="fade-up" className='md:p-16 p-6 text-center'>
                     <h1 className='md:my-5 text-4xl md:text-7xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700'>Welcome To   <br />Our Chef Master 
                         <br />
                          Recipes</h1>
@@ -107,36 +107,31 @@ const Home = () => {
                     <p className='font-semibold text-sm my-4'>A recipe website can help us with a variety of things related to cooking and meal preparation.</p>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 mt-10 mb-28'>
-                    <div className='mx-auto'>
+                    <div data-aos="fade-up"  className='mx-auto'>
                         <Slider></Slider>
                     </div>
 
-                    <div className='mx-auto lg:mt-0 mt-3 lg:p-1 p-4 md:px-5'>
+                    <div  className='mx-auto lg:mt-0 mt-3 lg:p-1 p-4 md:px-5'>
 
-                        <div>
+                        <div data-aos="fade-up" >
                             <h1 className='font-semibold'>Recipe ideas</h1>
                             <p className='text-sm text-gray-700'> If you are looking for inspiration for what to cook for dinner, a recipe website can be a great resource for finding new and interesting recipe ideas. You can search for recipes based on specific ingredients, dietary restrictions, or cuisine types.</p>
                         </div>
 
-                        <div className='mt-5'>
+                        <div data-aos="fade-up"  className='mt-5'>
 
                             <h1 className='font-semibold'>Cooking tips</h1>
                             <p className='text-sm text-gray-700'> A recipe website can also provide helpful cooking tips and techniques to help you improve your culinary skills. For example, you might find tips on how to properly roast a chicken or how to make the perfect homemade pasta.</p>
                         </div>
 
-                        <div className='mt-5'>
+                        <div data-aos="fade-up"  className='mt-5'>
 
                             <h1 className='font-semibold'>Nutritional information</h1>
                             <p className='text-sm text-gray-700'>Many recipe websites provide detailed nutritional information for each recipe, which can be helpful for people who are trying to eat a balanced and healthy diet.</p>
                         </div>
 
-                        {/* <div className='mt-5'>
-
-                            <h1 className='font-semibold'>User reviews</h1>
-                            <p className='text-sm text-gray-700'>Most recipe websites allow users to leave reviews and ratings for each recipe. This can be helpful in determining whether a recipe is worth trying or not.</p>
-                        </div> */}
-
-                        <div className='mt-8'>
+                     
+                        <div data-aos="fade-up"  className='mt-8'>
                             <Link to='/help'> <button className='btn btn-outline  btn-warning'>read more<FaArrowRight className='ms-2'></FaArrowRight></button></Link>
                         </div>
 

@@ -19,7 +19,7 @@ const SingleChefRecipes = ({ allRecies }) => {
 
     return (
         <>
-            <div className='my-10'>
+            <div data-aos="fade-up"  className='my-10'>
                 <div className="card md:card-side bg-base-100 shadow-xl">
                     <figure><img className='w-96 h-64' src={image} alt="Movie" /></figure>
 

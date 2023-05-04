@@ -5,7 +5,7 @@ const About = () => {
         <>
 
             <div>
-                <div className='max-w-xl sm:mx-auto lg:max-w-2xl'>
+                <div data-aos="fade-up"  className='max-w-xl sm:mx-auto lg:max-w-2xl'>
 
                             
         <div className='max-w-xl mb-3 md:mx-auto sm:text-center lg:max-w-2xl px-6 md:p-0 mt-8'>
@@ -28,8 +28,8 @@ const About = () => {
                 </div>
                 <div className='max-w-screen-xl sm:mx-auto'>
                     <div className='grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2 p-6 md:p-16 mb-8'>
-                        <div className='space-y-8'>
-                            <div>
+                        <div  className='space-y-8'>
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-semibold'>
                                     Taste of Home - Delicious Recipes from a Professional Chef
                                 </p>
@@ -42,7 +42,7 @@ const About = () => {
                                        their thoughts on food trends, ingredients, and culinary news.
                                 </p>
                             </div>
-                            <div>
+                            <div data-aos="fade-up" >
 
 
                                 <p className='mb-4 text-xl font-medium'>
@@ -55,26 +55,25 @@ const About = () => {
                                        and photos of the finished dish. The website could also include a forum where visitors can share
                                         their own recipe ideas and ask for advice from the community.
                                 </p>
-                            </div>
+                            </div >
 
 
-
-                            <div>
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
-                                    Healthy Eating Made Delicious: Chef-Curated Recipes for a Better You
-                                </p>
+                                    Healthy Indulgence: Decadent Recipes with a Healthy Twist from a Professional Chef              </p>
                                 <p className='text-gray-700'>
-                                    This website could focus on healthy recipes curated by a 
-                                    professional chef, with a focus on using fresh, whole 
-                                    ingredients. The chef could provide tips on meal planning,
-                                     portion control, and how to make healthy eating delicious and 
-                                     satisfying. The website could also include resources on food sourcing,
-                                      organic farming, and sustainability.
-                                </p>
+                                This website could feature indulgent recipes with a healthy
+                                 twist, curated by a professional chef. The chef could provide
+                                  tips on how to make these dishes healthier without sacrificing 
+                                  flavor, as well as ingredient substitutions to accommodate different 
+                                  dietary needs. The website could also include resources on healthy eating habits and lifestyle choices. </p>
                             </div>
 
 
-                            <div>
+                        
+
+
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
                                     The Global Kitchen: Explore World Cuisine with a Professional Chef              </p>
                                 <p className='text-gray-700'>
@@ -87,7 +86,7 @@ const About = () => {
                                        and cooking techniques for each region.</p>
                             </div>
 
-                            <div>
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
                                     The Ultimate Comfort Food: Classic Recipes with a Chefs Twist
                                 </p>
@@ -105,7 +104,25 @@ const About = () => {
 
 
                         <div className='space-y-8'>
-                            <div>
+                          
+                        <div data-aos="fade-up" >
+                                <p className='mb-4 text-xl font-medium'>
+                                Weekend Warrior: Epic Recipes for Your Next Cooking Adventure                                </p>
+                                <p className='text-gray-700'>
+                                This website could feature epic recipes for 
+                                adventurous home cooks who love to spend their
+                                 weekends in the kitchen. The chef could provide
+                                  tips on cooking techniques, ingredient substitutions, 
+                                  and how to make these dishes even more impressive. 
+                                  The website could also include a forum where visitors 
+                                  can share their own culinary adventures and ask for advice from the community.                                </p>
+                            </div>
+
+
+
+                        
+
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
                                     One-Pot Wonders: Easy and Delicious Meals for Busy Weeknights
                                 </p>
@@ -119,7 +136,21 @@ const About = () => {
                                 </p>
                             </div>
 
-                            <div>
+                            <div data-aos="fade-up" >
+                                <p className='mb-4 text-xl font-medium'>
+                                    Healthy Eating Made Delicious: Chef-Curated Recipes for a Better You
+                                </p>
+                                <p className='text-gray-700'>
+                                    This website could focus on healthy recipes curated by a 
+                                    professional chef, with a focus on using fresh, whole 
+                                    ingredients. The chef could provide tips on meal planning,
+                                     portion control, and how to make healthy eating delicious and 
+                                     satisfying. The website could also include resources on food sourcing,
+                                      organic farming, and sustainability.
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
                                     Meatless Magic: Delicious Vegetarian and Vegan Recipes from a Professional Chef
                                 </p>
@@ -133,7 +164,8 @@ const About = () => {
                                 </p>
                             </div>
 
-                            <div>
+                            
+                            <div data-aos="fade-up" >
                                 <p className='mb-4 text-xl font-medium'>
                                     Bake Like a Pro: Sweet and Savory Baking Recipes from a Professional Chef
                                 </p>
@@ -147,33 +179,8 @@ const About = () => {
                                 </p>
                             </div>
 
-
-
-                            <div>
-                                <p className='mb-4 text-xl font-medium'>
-                                    Healthy Indulgence: Decadent Recipes with a Healthy Twist from a Professional Chef              </p>
-                                <p className='text-gray-700'>
-                                This website could feature indulgent recipes with a healthy
-                                 twist, curated by a professional chef. The chef could provide
-                                  tips on how to make these dishes healthier without sacrificing 
-                                  flavor, as well as ingredient substitutions to accommodate different 
-                                  dietary needs. The website could also include resources on healthy eating habits and lifestyle choices. </p>
-                            </div>
-
-
                             
-                            <div>
-                                <p className='mb-4 text-xl font-medium'>
-                                Weekend Warrior: Epic Recipes for Your Next Cooking Adventure                                </p>
-                                <p className='text-gray-700'>
-                                This website could feature epic recipes for 
-                                adventurous home cooks who love to spend their
-                                 weekends in the kitchen. The chef could provide
-                                  tips on cooking techniques, ingredient substitutions, 
-                                  and how to make these dishes even more impressive. 
-                                  The website could also include a forum where visitors 
-                                  can share their own culinary adventures and ask for advice from the community.                                </p>
-                            </div>
+                         
                         </div>
                     </div>
                 </div>
