@@ -1,4 +1,4 @@
-#### welcome to our chef-master recipe site
+### welcome to our chef-master recipes site
 - First created Navbar and Footer
 
 
@@ -36,4 +36,4 @@ Then Chef er details show all the details in the card.
 
 
 
-# Live website Link:
+# Live website Link:  https://chef-master-b155b.web.app/

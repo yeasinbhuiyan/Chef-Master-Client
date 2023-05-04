@@ -24,7 +24,7 @@ const Blog = () => {
 
 
 
-            <div ref={ref} className='p-10 react-pdf__Page__canvas'>
+            <div ref={ref} className='p-16 react-pdf__Page__canvas'>
                 <div className='my-8'>
                     <h1 className='text-3xl font-bold'>  i. Tell us the differences between uncontrolled and controlled
                         components.</h1>
