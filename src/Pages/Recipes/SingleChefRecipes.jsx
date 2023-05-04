@@ -55,7 +55,7 @@ const SingleChefRecipes = ({ allRecies }) => {
                         /> <span className='font-semibold'>{rating}</span></p>
 
                         <div className="card-actions justify-end">
-                            <button disabled={favourite} onClick={handleFavourite} className="btn btn-dark">Favourite</button>
+                            <button disabled={favourite} onClick={handleFavourite} className="btn btn-gray">Favourite</button>
                         </div>
                     </div> 
                 </div>

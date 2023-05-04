@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from '../../assets/63862-cool-food-truck.json'
 import Lottie from "lottie-react";
+import emailjs from '@emailjs/browser';
+
+
 const FeedbackForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_b1ldzqr', 'template_y8mr7x3', form.current, 'wlFeRF5I9YHm1nE51')
+            .then((result) => {
+                console.log(result, 'success');
+            }, (error) => {
+                console.log(error.text, 'error');
+            });
+    };
 
 
 
@@ -20,7 +37,10 @@ const FeedbackForm = () => {
 
 
                 <div className="card mt-20 w-80 mx-auto">
-                    <form>
+
+
+
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="mb-4">
                             <label
                                 htmlFor="name"
@@ -29,6 +49,7 @@ const FeedbackForm = () => {
                                 Name
                             </label>
                             <input
+                            name="user_name"
                                 type="text"
                                 id="name"
                                 //   value={name}
@@ -48,6 +69,7 @@ const FeedbackForm = () => {
                                 Email
                             </label>
                             <input
+                             name="user_email"
                                 type="email"
                                 id="email"
                                 //   value={email}
@@ -67,6 +89,7 @@ const FeedbackForm = () => {
                                 Message
                             </label>
                             <textarea
+                                name="message"
                                 id="message"
                                 //   value={message}
                                 //   onChange={(event) => setMessage(event.target.value)}
@@ -87,10 +110,23 @@ const FeedbackForm = () => {
                             </button>
                         </div>
                     </form>
+{/* 
+                    <form ref={form} onSubmit={sendEmail}>
+                        <label>Name</label>
+                        <input type="text" name="user_name" />
+                        <label>Email</label>
+                        <input type="email" name="user_email" />
+                        <label>Message</label>
+                        <textarea name="message" />
+                        <input type="submit" value="Send" />
+                    </form> */}
+
+
+
                 </div>
 
 
-                <div className='w-10/12 mx-auto'>
+                <div className='w-10/12 md:mt-20 lg:mt-0 mx-auto'>
                     <Lottie animationData={logo} loop={true} />
                 </div>
 

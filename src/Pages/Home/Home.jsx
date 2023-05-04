@@ -17,7 +17,7 @@ const Home = () => {
 
     const [allChef, setAllchef] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/chefDetails')
+        fetch('https://chef-master-server-yeasinbhuiyan.vercel.app/chefDetails')
             .then(res => res.json())
             .then(data => setAllchef(data))
 
@@ -38,9 +38,9 @@ const Home = () => {
             {/* banner section  */}
             <div className='banner-container'>
                 <div className='md:p-16 p-6 text-center'>
-                    <h1 className='md:my-5 text-4xl md:text-7xl font-semibold text-gray-200'>Welcome To   <br />Our Bangladeshi
+                    <h1 className='md:my-5 text-4xl md:text-7xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700'>Welcome To   <br />Our Chef Master 
                         <br />
-                        Shape Recipes</h1>
+                         Recipes</h1>
 
                     <p className='mt-5 text-gray-400 font-medium'> where you will find a collection of delicious and unique recipes created by a seasoned chef with a passion for good food. From comforting classics to innovative dishes, our recipes are designed to tantalize your taste buds and inspire your culinary creativity. Each recipe comes with detailed instructions and helpful tips to ensure success in the kitchen. Whether you are a novice cook or a seasoned pro, our recipes are approachable, easy to follow, and always packed with flavor. So, grab your apron and get ready to explore the world of culinary delights with us!</p>
                 </div>

@@ -189,7 +189,7 @@ const Register = () => {
 
 
                         <div className="form-control mt-6">
-                            <button disabled={!email || !password || !img || !name || passwordError || emailError} className="btn btn-dark">Register</button>
+                            <button disabled={!email || !password || !img || !name || passwordError || emailError} className="btn btn-gray">Register</button>
                         </div>
                         <p><small>Already have an account? <Link className='font-semibold' to='/login'>Login</Link></small></p>
                         <p className='text-red-400'>{error}</p>

@@ -145,7 +145,7 @@ const Login = () => {
 
                         <div className='flex mb-3 gap-4'>
                             <div>
-                                <button onClick={handleGoogleLogin} className="btn btn-outline btn-success"> <FaGoogle className='text-green-700'></FaGoogle> <small>Login With Google</small></button>
+                                <button onClick={handleGoogleLogin} className="btn btn-outline"> <FaGoogle></FaGoogle> <small>Login With Google</small></button>
                             </div>
                             <div>
                                 <button onClick={handleGithubLogin} className="btn btn-outline"><FaGithub></FaGithub> <small>Login With Github</small></button>

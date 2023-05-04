@@ -15,10 +15,10 @@ const NavigationBar = () => {
 
     return (
         <div className=''>
-            <div className='navbar bg-gradient-to-r from-gray-500  to-gray-200 flex justify-between md:items-center'>
+            <div className='navbar bg-gradient-to-r from-gray-300  to-gray-500 flex justify-between md:items-center'>
 
 
-                        <h1 className=''><span className='text-transparent text-2xl font-semibold bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-700'>Chef</span> <span className='font-semibold'><sub>Master</sub></span></h1>
+                        <h1 className=''><span className=' text-transparent text-2xl font-semibold bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700'>Chef</span> <span className='font-semibold'><sub>Master</sub></span></h1>
 
 
 
@@ -26,11 +26,11 @@ const NavigationBar = () => {
                 <div className='md:flex hidden mx-auto'>
 
 
-                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink>
 
 
 
@@ -72,21 +72,21 @@ const NavigationBar = () => {
                                <button className='bg-gray-600 text-center btn-dark px-3 py-1 text-white rounded'><Link to='/login'>Login</Link></button>}
                         </div>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>
                         </li>
 
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
 
                         </li>
                         <li className='my-2 list-none text-xl font-semibold'>
-                            <NavLink className={({ isActive }) => isActive ? 'text-yellow-900 font-bold' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'> Contact</NavLink>
 
                         </li>
 

@@ -40,7 +40,7 @@ const AllChef = ({ chefDetails }) => {
 
                     <div className="card-actions justify-end">
 
-                        <Link to={`/recipes/${id}`}><button className="btn btn-gray w-full mt-5">View Recipes</button>
+                        <Link to={`/recipes/${id}`}><button className="btn btn-dark w-full mt-5">View Recipes</button>
                         </Link>
                     </div>
                 </div>

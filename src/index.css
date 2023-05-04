@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+.btn-dark{
+    @apply bg-gradient-to-r from-gray-950 to-gray-600  font-semibold text-white
+}

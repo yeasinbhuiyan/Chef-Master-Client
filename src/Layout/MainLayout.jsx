@@ -11,7 +11,9 @@ const MainLayout = () => {
             <NavigationBar></NavigationBar>
             <ToastContainer />
 
-            <Outlet></Outlet>
+      
+           <Outlet></Outlet>
+        
 
 
             <Footer></Footer>

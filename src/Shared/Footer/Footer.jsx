@@ -14,12 +14,12 @@ const Footer = () => {
                 <div className="mt-5">
                     <h1 className="font-bold text-gray-100"><Link>SHOP</Link></h1>
                     <ul className="">
-                        <li className="mt-3 text-gray-400"><Link>Plans</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Food Recipes</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Vagitable Food Item</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Foreign food </Link></li>
-                        <li className="mt-2 text-gray-400"><Link>PayGo Plan</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Add a Line</Link></li>
+                        <li className="mt-3 text-gray-400 font-medium"><Link>Plans</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Food Recipes</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Vagitable Food Item</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Foreign food </Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>PayGo Plan</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Add a Line</Link></li>
                     </ul>
 
 
@@ -28,13 +28,13 @@ const Footer = () => {
                 <div className="mt-5">
                     <h1 className="font-bold text-gray-100"><Link>SERVICE FEATURES</Link></h1>
                     <ul className="ul">
-                        <li className="mt-3 text-gray-400"><Link>Coverage</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>5G</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Features</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>uTalk</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Call China</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Call Mexico</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Call India</Link></li>
+                        <li className="mt-3 text-gray-400 font-medium"><Link>Coverage</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>5G</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Features</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>uTalk</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Call China</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Call Mexico</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Call India</Link></li>
                     </ul>
 
 
@@ -43,14 +43,14 @@ const Footer = () => {
                 <div className="mt-5">
                     <h1 className="font-bold text-gray-100"><Link>ABOUT Our Chef Recipes</Link></h1>
                     <ul className="ul">
-                        <li className="mt-2 text-gray-400"><Link>Refer A Friend</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Become A Retailer</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Become A Partner</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Cookie Notice</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Careers</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>In The News</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>FAQ</Link></li>
-                        <li className="mt-2 text-gray-400"><Link>Recipes Order Status</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Chefs Specialties</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Healthy Eating</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Global Cuisine </Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Cookie Notice</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Careers</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>In The News</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>FAQ</Link></li>
+                        <li className="mt-2 text-gray-400 font-medium"><Link>Recipes Order Status</Link></li>
                     </ul>
 
 
