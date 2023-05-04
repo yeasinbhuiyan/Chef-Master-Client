@@ -33,7 +33,9 @@ const Login = () => {
 
 
 
-        if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
+
+        // eslint-disable-next-line no-useless-escape
+        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
             return setError('Please Give Us Your Valid Email')
 
         }
