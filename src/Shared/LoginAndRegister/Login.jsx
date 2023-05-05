@@ -7,6 +7,11 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
+
+
+
+
+
     const { loginAccount, google, github } = useContext(AuthContext)
 
 
@@ -100,11 +105,6 @@ const Login = () => {
 
 
 
-
-
-    // const handleEmail=()=>{
-
-    // }
 
     return (
 

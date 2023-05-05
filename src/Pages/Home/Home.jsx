@@ -72,13 +72,13 @@ const Home = () => {
             </section>
 
 
-            {/* Frequently asked question container */}
+            {/* Commonly asked question container */}
 
 
             <section>
                 <div className='text-center p-5 md:p-1 mt-28'>
-                    <h1 className='text-4xl font-semibold text-gray-600'>Frequently Asked Question?</h1>
-                    <p className='font-semibold text-sm mt-3'>You may find here some frequently asked questions that may help you a lot and we have answered the questions below.</p>
+                    <h1 className='text-4xl font-semibold text-gray-600'>Commonly Asked Question?</h1>
+                    <p className='font-semibold text-sm mt-3'>You may find here some Commonly asked questions that may help you a lot and we have answered the questions below.</p>
                 </div>
                 <div className='lg:grid lg:grid-cols-2 p-10 mx-auto flex flex-col-reverse '>
                     <div className='mt-5'>
