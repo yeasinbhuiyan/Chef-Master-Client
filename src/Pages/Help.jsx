@@ -79,9 +79,6 @@ const Help = () => {
                     </div>
 
 
-
-
-
                     <div className='space-y-8'>
                         <div>
                             <p className='mb-4 text-xl font-semibold'>

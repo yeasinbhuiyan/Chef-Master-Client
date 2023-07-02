@@ -29,26 +29,13 @@ const Register = () => {
 
 
     const handleRegister = (event) => {
-
-          
-
         event.preventDefault()
         const eventTarget = event.target
-        // const email = eventTarget.email.value
-        // const password = eventTarget.password.value
-        // const name = eventTarget.name.value
-        // const img = eventTarget.photo.value
-
-        console.log(location)
-
         const from = location.state?.from?.pathname || '/'
 
         if (password.length < 6) {
             setError('At least give me 6 characters')
         }
-
-
-
         createAccount(email, password)
             .then(result => {
                 const newAccount = result.user
@@ -67,10 +54,7 @@ const Register = () => {
 
     const handleName = (event) => {
         const name = event.target.value
-
         setName(name)
-
-
     }
 
     const handleEmail = (event) => {
@@ -79,7 +63,7 @@ const Register = () => {
         // /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
         
-        
+    
         // eslint-disable-next-line no-useless-escape
         if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
 
@@ -92,12 +76,6 @@ const Register = () => {
     }
 
 
-
-
-
-
-    console.log(password)
-
     const handlePassword = (event) => {
         const password = event.target.value
         setPassword(password)
@@ -108,13 +86,11 @@ const Register = () => {
             setPasswordError(`At Least Give Me Six Character`)
 
         }
-
         // if (!/(?=.*[A-Z])(?=.*?[0-9]).{6}/.test(password)) {
         //     setPasswordError(`Minimum Six characters, 
         //     at least Capital 
         //     letter and one number`)
         // }
-
         else {
             setPasswordError('')
 
@@ -123,7 +99,6 @@ const Register = () => {
     }
 
     const handlePhoto = (event) => {
-
         const photoUrl = event.target.value
         setImg(photoUrl)
     }

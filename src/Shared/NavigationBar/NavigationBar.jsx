@@ -18,7 +18,7 @@ const NavigationBar = () => {
             <div className='navbar bg-gradient-to-r from-gray-300  to-gray-500 flex justify-between md:items-center'>
 
 
-                        <h1 className=''><span className=' text-transparent text-2xl font-semibold bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700'>Chef</span> <span className='font-semibold'><sub>Master</sub></span></h1>
+                <h1><span className=' text-transparent text-2xl font-semibold bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700'>Chef</span> <span className='font-semibold'><sub>Master</sub></span></h1>
 
 
 
@@ -30,9 +30,6 @@ const NavigationBar = () => {
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/blog'>Blog</NavLink>
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/about'> About</NavLink>
                     <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/help'> Help</NavLink>
-                    {/* <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/contact'>Contact</NavLink> */}
-
-
 
                 </div>
 
@@ -41,11 +38,6 @@ const NavigationBar = () => {
                     {user ? <> <button onClick={logout} className='bg-gray-600  btn-dark px-3 py-1 text-white rounded'>Logout </button>   <img className='rounded-full ms-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'} title={user?.displayName} alt="" /></> :
                         <button className='bg-gray-600  btn-dark  py-1 text-white rounded text-center'><Link className='text-center ps-5' to='/login'>Login</Link></button>}
                 </div>
-
-
-
-
-
 
 
                 <div className='md:hidden '>
@@ -68,8 +60,8 @@ const NavigationBar = () => {
 
 
                         <div className='flex items-center mb-2 p-3'>
-                            {user ? <> <img  title={user.displayName} className='rounded-full me-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'}  alt="" /> <button onClick={logout} className='bg-gray-600  btn-dark px-3 py-1 text-white rounded'>Logout </button></> :
-                               <button className='bg-gray-600 text-center btn-dark px-3 py-1 text-white rounded'><Link to='/login'>Login</Link></button>}
+                            {user ? <> <img title={user.displayName} className='rounded-full me-3 cursor-pointer' src={user?.photoURL} width={'40px'} height={'35px'} alt="" /> <button onClick={logout} className='bg-gray-600  btn-dark px-3 py-1 text-white rounded'>Logout </button></> :
+                                <button className='bg-gray-600 text-center btn-dark px-3 py-1 text-white rounded'><Link to='/login'>Login</Link></button>}
                         </div>
                         <li className='my-2 list-none text-xl font-semibold'>
                             <NavLink className={({ isActive }) => isActive ? ' text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-pink-700 font-bold' : 'text-black font-semibold'} to='/'>Home</NavLink>

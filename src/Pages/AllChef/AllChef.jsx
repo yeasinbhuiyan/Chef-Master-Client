@@ -14,16 +14,6 @@ const AllChef = ({ chefDetails }) => {
             <div className="card w-full bg-base-100 shadow-xl">
                 <figure><LazyLoadImage className='w-full h-64' src={image} alt="Shoes" /></figure>
 
-                {/* <LazyLoadImage 
-                
-                src={image}
-                className='w-full h-64'
-                
-                /> */}
-
-
-
-                
                 <div className="card-body">
                     <h2 className="card-title text-2xl font-semibold">{name}</h2>
 

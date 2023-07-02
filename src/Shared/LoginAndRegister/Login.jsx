@@ -7,11 +7,6 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-
-
-
-
-
     const { loginAccount, google, github } = useContext(AuthContext)
 
 
@@ -63,16 +58,7 @@ const Login = () => {
                 setError('Password Not Matched')
             })
 
-
-
-
-
-
-
     }
-
-
-
 
     const handleGoogleLogin = () => {
         google(googelProvider)
@@ -102,9 +88,6 @@ const Login = () => {
                 console.log(error.message)
             })
     }
-
-
-
 
     return (
 
